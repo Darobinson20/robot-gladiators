@@ -13,8 +13,15 @@ console.log(enemyNames.length);
 for (var i = 0; i < enemyNames.length; i++) {
   var pickedEnemyNames = enemyNames[i];
   enemyHealth = 50;
- 
-}
+  if (playerHealth > 0) {
+    window.alert("Welcome to Robot Gladiators! Round" + (i + 1) );
+  }
+  else {
+      window.alert("You have lost your robot in battle! Game Over!");
+      break;
+    }
+  }
+
   console.log(enemyNames[i]);
 
   var fight = function(enemyName) {
